@@ -116,6 +116,25 @@ body {
   background-color: #650362;
 }
 
+.importBox {
+  margin-top: 1rem;
+}
+
+.importBtn {
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #bababa;
+  background: #4d004d42;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.importBtn:hover {
+  transform: scale(1.03);
+  color: white;
+  background: #650362;
+}
+
 .playlist {
   height: 250px;
   overflow-y: scroll;

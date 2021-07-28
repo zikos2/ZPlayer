@@ -117,6 +117,16 @@ function useProvidePlayer() {
     });
   };
 
+  const updateTracksFolder = (folderPath) => {
+    const tracksFromFile = getTracksFromFolder(folderPath);
+      setTracks(tracksFromFile);
+      setPlayBackData({
+        ...playBackData,
+        url: tracksFromFile[0].streamUrl,
+        id: 0
+      });
+  }
+
   useEffect(() => {
     if (tracks.length === 0) {
       const tracksFromFile = getTracksFromFolder(process.env.FOLDER_LOCATION);
@@ -139,6 +149,7 @@ function useProvidePlayer() {
     random,
     playNext,
     playBackData,
+    updateTracksFolder,
     tracks,
   };
 }
